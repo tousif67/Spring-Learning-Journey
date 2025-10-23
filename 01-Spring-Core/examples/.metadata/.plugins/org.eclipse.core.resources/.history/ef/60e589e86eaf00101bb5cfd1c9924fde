@@ -1,0 +1,22 @@
+package main;
+class Alpha {
+	public void alpha() {
+		
+	}
+	
+}
+class Beta {
+	public void beta() {
+		Alpha a = new Alpha(); //Tightly coupled
+		a.alpha();
+	}
+}
+
+public class LaunchApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

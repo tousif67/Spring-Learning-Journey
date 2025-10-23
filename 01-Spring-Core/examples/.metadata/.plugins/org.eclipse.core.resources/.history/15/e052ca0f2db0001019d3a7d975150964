@@ -1,0 +1,27 @@
+package main;
+
+//import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import service.User;
+
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.ApplicationContext;
+
+public class LaunchApp {
+
+	public static void main(String[] args) {
+//Bean Factory
+		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+		XmlBeanDefinitionReader reader = new  XmlBeanDefinitionReader(beanFactory);
+		reader.loadBeanDefinitions("applicationconfig.xml");
+		User user = beanFactory.getBean(User.class);
+		Boolean status = user.buyTheCourse(4585.56);
+		if(status) {
+			System.out.println("Course purchased successfully");
+		} else {
+			System.out.println("Course purchased failed");
+		}
+	}
+
+}

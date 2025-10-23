@@ -1,0 +1,34 @@
+package main;
+//class Alpha {
+//	public void alpha() {
+//		
+//	}
+//	
+//}
+//class Beta {
+//	public void beta() {
+//		Alpha a = new Alpha(); //Tightly coupled
+//		a.alpha();
+//	}
+//}
+
+import service.Java;
+import service.User;
+
+public class LaunchApp {
+
+	public static void main(String[] args) {
+		User user = new User();
+		user.setCourse(new Java());
+		Boolean status = user.buyTheCourse(4515.5);
+		if(status) {
+			System.out.println("Course enrolled Successfully");
+		} else
+		{
+			System.out.println("Failed to Enrolled the Course");
+		}
+		
+
+	}
+
+}
