@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Example bean definition -->
+   <!--  <bean id="sb" class="service.SpringBoot"/>
+    <bean id="java" class="service.Java" primary="true"/>
+    <bean id="user" class="service.User" autowire="byType"/>
+    
+    <bean id="sb" class="service.SpringBoot"/>
+    <bean id="java" class="service.Java" autowire-candidate="false"/>
+    <bean id="user" class="service.User" autowire="constructor"/>
+    
+    <bean id="sb" class="service.SpringBoot"/>
+    <bean id="course" class="service.Java" />
+    <bean id="user" class="service.User" autowire="byName"/>-->
+    
+    <bean id="sb" class="service.SpringBoot"/>
+    <bean id="java" class="service.Java"/>
+    <bean id="user" class="service.User" autowire="no">
+    <property ref="java" name ="course"	></property>
+    </bean>
+    
+
+</beans>
