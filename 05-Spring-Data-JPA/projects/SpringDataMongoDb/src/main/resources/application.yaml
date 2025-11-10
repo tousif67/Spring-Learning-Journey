@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: SpringDataMongoDb
+
+
+  data:
+    mongodb:
+      database: finisher
+      port: 27017
+      host: localhost
