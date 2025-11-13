@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: PathParamWebApp
+
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
+
+server:
+  port: 8484
+  servlet:
+    context-path: /UserApp
