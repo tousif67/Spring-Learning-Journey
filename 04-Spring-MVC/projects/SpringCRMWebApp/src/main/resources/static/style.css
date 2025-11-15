@@ -1,0 +1,90 @@
+/* ---------- GLOBAL STYLES ---------- */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+/* ---------- FORM CONTAINER ---------- */
+.form-container, .list-container {
+    width: 60%;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ---------- TITLES ---------- */
+h2 {
+    text-align: center;
+    color: #2C73D2;
+    margin-bottom: 20px;
+}
+
+/* ---------- INPUT FIELDS ---------- */
+input[type=text], input[type=number] {
+    width: 95%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #cfd6de;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ---------- BUTTONS ---------- */
+button, input[type=submit], input[type=button] {
+    background-color: #2C73D2;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover, input[type=button]:hover, input[type=submit]:hover {
+    background-color: #1B5BBE;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #2C73D2;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: #2C73D2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1B5BBE;
+}
+
+/* ---------- ADD BUTTON ---------- */
+.add-button {
+    background-color: #28a745 !important;
+    margin-bottom: 15px;
+}
+
+.add-button:hover {
+    background-color: #218838 !important;
+}
