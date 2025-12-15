@@ -4,6 +4,7 @@ import com.user.model.Foreign;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,5 +39,10 @@ public class ForeignController {
     public ResponseEntity<String> getMoreInfo(HttpServletRequest request) {
         String msg = "Hello your session id : " + request.getSession().getId();
         return new ResponseEntity<String>(msg, HttpStatus.OK);
+    }
+
+    @GetMapping("/get-csrf-info")
+    public CsrfToken getCsrfToken(HttpServletRequest request) {
+        return (CsrfToken) request.getAttribute("_csrf");
     }
 }
